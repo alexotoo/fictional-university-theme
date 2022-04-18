@@ -14,6 +14,19 @@ function university_features() {
   add_theme_support('title-tag');
 }
 
+// registers new post type
+function university_post_type()
+{
+  register_post_type( "event",[
+    "public" => true,
+    "menu_icon" => "dashicons-calendar",
+    "labels" => [
+      "name" => "Events"
+    ]
+  ] );
+}
+
 add_action('after_setup_theme', 'university_features');
+add_action('init', 'university_post_type');
 
 
