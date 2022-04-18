@@ -1,3 +1,5 @@
+
+<!-- things here will appear on blog page //this page controls individual blog post dynamically  -->
 <?php
   
   get_header();
